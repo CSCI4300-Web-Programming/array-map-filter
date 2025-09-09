@@ -1,29 +1,29 @@
 function filterEvenNumbers(numbers) {
-  return numbers.filter(number => number % 2 === 0);
+  // Return a new array containing only even numbers
 }
 
 function filterOddNumbers(numbers) {
-  return numbers.filter(number => number % 2 !== 0);
+  // Return a new array containing only odd numbers
 }
 
 function filterAdults(users) {
-  return users.filter(user => user.age >= 18);
+  // Return a new array containing only users aged 18 and above (stored in 'age' property)
 }
 
 function filterByUserType(users, type) {
-  return users.filter(user => user.type === type);
+  // Return a new array containing only users of the specified type (stored in 'type' property)
 }
 
 function doubleNumbers(numbers) {
-  return numbers.map(number => number * 2);
+  // Return a new array with each number doubled
 }
 
 function squareNumbers(numbers) {
-  return numbers.map(number => number * number);
+  // Return a new array with each number squared
 }
 
 function formatUserNames(users) {
-  return users.map(user => user.name.toUpperCase());
+  // Return a new array with each user's name in uppercase (stored in 'name' property, use toUpperCase() method)
 }
 
 
