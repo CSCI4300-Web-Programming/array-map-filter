@@ -3,9 +3,9 @@ const {
   filterOddNumbers,
   filterAdults,
   filterByUserType,
-  doubleNumbers,
-  squareNumbers,
-  formatUserNames
+  mapDoubleNumbers,
+  mapSquareNumbers,
+  mapFormatUserNames
 } = require('../index');
 
 describe('Array Methods Tests', () => {
@@ -67,28 +67,28 @@ describe('Array Methods Tests', () => {
   });
 
   describe('Map Functions', () => {
-    test('doubleNumbers should double each number', () => {
+    test('mapDoubleNumbers should double each number', () => {
       const input = [1, 2, 3, 4, 5];
       const expected = [2, 4, 6, 8, 10];
-      const result = doubleNumbers(input);
+      const result = mapDoubleNumbers(input);
       expect(result).toEqual(expected);
     });
 
-    test('squareNumbers should square each number', () => {
+    test('mapSquareNumbers should square each number', () => {
       const input = [1, 2, 3, 4, 5];
       const expected = [1, 4, 9, 16, 25];
-      const result = squareNumbers(input);
+      const result = mapSquareNumbers(input);
       expect(result).toEqual(expected);
     });
 
-    test('formatUserNames should format names to uppercase', () => {
+    test('mapFormatUserNames should format names to uppercase', () => {
       const users = [
         { name: 'alice', age: 25 },
         { name: 'bob', age: 30 },
         { name: 'charlie', age: 35 }
       ];
       const expected = ['ALICE', 'BOB', 'CHARLIE'];
-      const result = formatUserNames(users);
+      const result = mapFormatUserNames(users);
       expect(result).toEqual(expected);
     });
 
@@ -96,7 +96,7 @@ describe('Array Methods Tests', () => {
       const original = [1, 2, 3];
       const copy = [...original];
       
-      doubleNumbers(original);
+      mapDoubleNumbers(original);
       expect(original).toEqual(copy);
     });
   });
@@ -112,8 +112,8 @@ describe('Array Methods Tests', () => {
       
       // First filter adults, then format names
       const adults = filterAdults(users);
-      const formattedNames = formatUserNames(adults);
-      
+      const formattedNames = mapFormatUserNames(adults);
+
       expect(formattedNames).toEqual(['BOB', 'CHARLIE']);
     });
 
@@ -121,8 +121,8 @@ describe('Array Methods Tests', () => {
       const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
       
       const evens = filterEvenNumbers(numbers);
-      const squaredEvens = squareNumbers(evens);
-      
+      const squaredEvens = mapSquareNumbers(evens);
+
       expect(squaredEvens).toEqual([4, 16, 36, 64, 100]);
     });
   });

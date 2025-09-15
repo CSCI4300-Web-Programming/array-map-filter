@@ -14,15 +14,15 @@ function filterByUserType(users, type) {
   // Return a new array containing only users of the specified type (stored in 'type' property)
 }
 
-function doubleNumbers(numbers) {
-  // Return a new array with each number doubled
+function mapDoubleNumbers(numbers) {
+  // Return a new array with each number doubled (n*2)
 }
 
-function squareNumbers(numbers) {
-  // Return a new array with each number squared
+function mapSquareNumbers(numbers) {
+  // Return a new array with each number squared (n^2)
 }
 
-function formatUserNames(users) {
+function mapFormatUserNames(users) {
   // Return a new array with each user's name in uppercase (stored in 'name' property, use toUpperCase() method)
 }
 
@@ -32,7 +32,7 @@ module.exports = {
   filterOddNumbers,
   filterAdults,
   filterByUserType,
-  doubleNumbers,
-  squareNumbers,
-  formatUserNames
+  mapDoubleNumbers,
+  mapSquareNumbers,
+  mapFormatUserNames
 };
